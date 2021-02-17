@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knockout App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app" class="card">
+    <div class="card-section">
+      <h2>Todolist</h2>
+      <p data-bind="if: !list().length">You don't have any todos yet!</p>
+      <p data-bind="if: list().length">These are the assets we have to work with.</p>
+
+      <form action="submit" data-bind="submit: submit">
+        <input type="text" placeholder="What you gonna do?" data-bind="value: todo">
+        <button>+ Add</button>
+      </form>
+      <figure data-bind="if: !list().length">😎</figure>
+      <ul class="counter-ui-container" data-bind="if: list().length">
+        <!-- ko foreach: list -->
+        <li>
+          <span data-bind="text: $data"></span>
+          <button data-bind="click: $parent.remove, attr: {'data-index': $index}">&times;</button>
+        </li>
+        <!-- /ko -->
+      </ul>
+    </div>
+    <footer>
+      <span>Happy hacking!</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
