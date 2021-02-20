@@ -15,6 +15,7 @@ html, body {
 body {
   color: #222;
   background: linear-gradient(180deg, #64CDDB 0%, #36ABD0 100%);
+  background-attachment: fixed;
   padding-top: 4em;
 }
 h2, p { margin: 0; }

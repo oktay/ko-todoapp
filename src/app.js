@@ -9,7 +9,7 @@ function TodoApp() {
   self.todo = ko.observable("");
 
   self.submit = () => {
-    self.list.push(self.todo());
+    self.todo().length && self.list.push(self.todo());
     self.todo("");
   };
 
