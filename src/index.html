@@ -20,11 +20,11 @@
         <button>+ Add</button>
       </form>
       <figure data-bind="if: !list().length">😎</figure>
-      <ul class="counter-ui-container" data-bind="if: list().length">
+      <ul class="todolist" data-bind="if: list().length">
         <!-- ko foreach: list -->
         <li>
           <span data-bind="text: $data"></span>
-          <button data-bind="click: $parent.remove, attr: {'data-index': $index}">&times;</button>
+          <button class="button_small" data-bind="click: $parent.remove, attr: {'data-index': $index}">&times;</button>
         </li>
         <!-- /ko -->
       </ul>

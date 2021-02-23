@@ -80,19 +80,16 @@ input {
   width: 32px;
   height: 32px;
 }
-.counter-ui-container {
+.todolist {
   margin:0;
   padding:0;
 }
-.counter-ui-container li {
+.todolist li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding:0.5em 0;
   margin:0;
-}
-.li_label {
-  font-size: 1.3em;
 }
 
 figure {
@@ -108,21 +105,3 @@ footer {
 footer span {
   font-size: 0.8em;
 }
-
-.icon-bone,
-.icon-ball,
-.icon-circle,
-.icon-rabbit {
-  width: 64px;
-  height: 64px;
-  image-rendering: pixelated;
-  display:inline-block;
-  background: url("https://assets.codepen.io/21542/Toys.png") no-repeat no-repeat;
-  background-size: 256px;
-  vertical-align: middle;
-  position: relative;
-  top: -8px;
-}
-.icon-ball { background-position: -64px;}
-.icon-circle { background-position: -128px;}
-.icon-rabbit { background-position: -192px;}
